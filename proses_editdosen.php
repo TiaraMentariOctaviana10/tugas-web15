@@ -22,5 +22,5 @@ if(!$result) {
 }
 
 // lakukan redirect ke halaman viewdosen.php
-header["location:viewdosen.php"];
+header("location:viewdosen.php");
 ?>

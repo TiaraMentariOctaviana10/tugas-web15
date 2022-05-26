@@ -3,7 +3,7 @@
 include 'koneksi.php';
 
 // mengecek apakah tombol input dari form  telah di  klik
-if (isset($_POST[''input])) {
+if (isset($_POST['input'])) {
 
 // membuat variabel untuk menampung data dari form
     $namaDosen = $_POST['namaDosen'];
@@ -15,7 +15,7 @@ $result = mysqli_query($link, $query);
 
 // periksa query apakah ada error
 if(!$result) {
-    die ("Query gagal dijalankan: ".mysli_errno($link).
+    die ("Query gagal dijalankan: ".mysqli_errno($link).
     " - ".mysqli_error($link));
     }
 }
