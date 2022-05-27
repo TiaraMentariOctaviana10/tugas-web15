@@ -57,7 +57,7 @@ if (isset($_GET['idDosen'])) {
                 </p>
                 <p>
                     <label for="noHP">No HP : </label>
-                    <input type="text" name="edit" value="<?php echo $noHP ?>">
+                    <input type="text" name="noHP" value="<?php echo $noHP ?>">
                 </p>
             </fieldset>
             <p>

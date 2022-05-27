@@ -10,7 +10,7 @@ $namaDosen = $_POST['namaDosen'];
 $noHP = $_POST['noHP'];
 
 // buat dan jalankan query UPDATE
-$query = "UPDATE t_dosen SET namaDosen Query = '$namaDosen', noHP = '$noHP' WHERE idDosen = '$id'";
+$query = "UPDATE t_dosen SET namaDosen = '".$namaDosen."', noHP = '".$noHP."' WHERE idDosen = ".$id;
 
 $result = mysqli_query($link, $query);
 
