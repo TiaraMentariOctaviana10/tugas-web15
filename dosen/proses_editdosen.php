@@ -2,7 +2,7 @@
 // mengecek apakah tombol edit telah di klik
 if(isset($_POST['edit'])) {
 // buat koneksi dengan database
-include("koneksi.php");
+include("../koneksi.php");
 
 // membuat variabel untuk menampung data dari form edit
 $id = $_POST['idDosen'];

@@ -1,6 +1,6 @@
 <?php
 // buka koneksi dengan MySQL
-include("koneksi.php");
+include("../koneksi.php");
 
 // mengecek apakah di url ada GET idDosen
 if(isset($_GET["idDosen"])) {
