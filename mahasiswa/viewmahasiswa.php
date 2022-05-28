@@ -52,6 +52,7 @@ $_GET['tabel'] = "t_mahasiswa";
                     echo "<td>".$data['NPM']."</td>";       // menampilan data NPM
                     echo "<td>".$data['namaMHS']."</td>";    // menampilkan data namaMHS
                     echo "<td>".$data['noHP']."</td>";       // menampilkan data noHP
+                    
                     // membuat  link untuk mengedit dan menghapus data
                     echo '<td>
                     <a href="editmahasiswa.php?NPM='.$data['NPM'].'">Edit</a> /
