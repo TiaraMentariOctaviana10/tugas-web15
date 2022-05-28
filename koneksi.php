@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $paswd = "";
-$name = "dbtiara_mentari";
+$name = "web15-bojoku";
 
 //proses koneksi
 $link = mysqli_connect($host,$user,$paswd,$name);

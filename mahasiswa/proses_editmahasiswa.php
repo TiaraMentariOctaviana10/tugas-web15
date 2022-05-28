@@ -5,12 +5,12 @@ if(isset($_POST['edit'])) {
 include("../koneksi.php");
 
 // membuat variabel untuk menampung data dari form edit
-$id = $_POST['idDosen'];
-$namaDosen = $_POST['namaDosen'];
+$id = $_POST['NPM'];
+$namaMHS = $_POST['namaMHS'];
 $noHP = $_POST['noHP'];
 
 // buat dan jalankan query UPDATE
-$query = "UPDATE t_dosen SET namaDosen = '".$namaDosen."', noHP = '".$noHP."' WHERE idDosen = ".$id;
+$query = "UPDATE t_mahasiswa SET namaMHS = '".$namaMHS."', noHP = '".$noHP."' WHERE NPM = ".$id;
 
 $result = mysqli_query($link, $query);
 
@@ -21,6 +21,6 @@ if(!$result) {
 }
 }
 
-// lakukan redirect ke halaman viewdosen.php
-header("location:viewdosen.php");
+// lakukan redirect ke halaman viewMahasiswa.php
+header("location:viewmahasiswa.php");
 ?>

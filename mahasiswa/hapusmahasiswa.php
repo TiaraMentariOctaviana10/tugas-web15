@@ -3,13 +3,13 @@
 include("../koneksi.php");
 
 // mengecek apakah di url ada GET idDosen
-if(isset($_GET["idDosen"])) {
+if(isset($_GET["NPM"])) {
 
     // menyimpan variabel id dai url ke dalam variabel $idDosen
-    $id = $_GET["idDosen"];
+    $id = $_GET["NPM"];
 
     // jalankan query DELETE untuk menghapus data
-    $query = "DELETE FROM t_dosen WHERE idDOsen='$id' ";
+    $query = "DELETE FROM t_dosen WHERE NPM='$id' ";
     $hasil_query = mysqli_query($link, $query);
 
     // periksa query, apakah ada kesalahan
@@ -19,5 +19,5 @@ if(isset($_GET["idDosen"])) {
     }
 }
 // melakukan redirect ke halaman viewdosen.php
-header("location:viewdosen.php");
+header("location:viewmahasiswa.php");
 ?>

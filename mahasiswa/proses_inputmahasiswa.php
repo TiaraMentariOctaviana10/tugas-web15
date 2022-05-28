@@ -6,11 +6,11 @@ include '../koneksi.php';
 if (isset($_POST['input'])) {
 
 // membuat variabel untuk menampung data dari form
-$namaDosen = $_POST['namaDosen'];
+$namaMHS = $_POST['namaMHS'];
 $noHP = $_POST['noHP'];
 
 // jalankan query INSERT untuk menambah data ke database
-$query = "INSERT INTO t_dosen VALUES (NULL, '$namaDosen', '$noHP')";
+$query = "INSERT INTO t_mahasiswa VALUES (NULL, '$namaMHS', '$noHP')";
 $result = mysqli_query($link, $query);
 
 // periksa query apakah ada error
@@ -20,6 +20,6 @@ if(!$result) {
     }
 }
 
-// melakukan redirect (mengalihkan) ke halaman viewdosen.php
-header("location:viewdosen.php");
+// melakukan redirect (mengalihkan) ke halaman viewMahasiswa.php
+header("location:viewmahasiswa.php");
 ?>

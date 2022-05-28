@@ -14,12 +14,12 @@
     <body>
         <h1>Input Data</h1>
         <div class="container">
-            <form id="form_dosen" action="proses_inputdosen.php" method="post">
+            <form id="form_Mahasiswa" action="proses_inputMahasiswa.php" method="post">
                 <fieldset>
-                    <legend>Input Data Dosen</legend>
+                    <legend>Input Data Mahasiswa</legend>
                     <p>
-                        <label for="nama">NamaDosen : </label>
-                        <input type="text" name="namaDosen" id="namaDosen">
+                        <label for="nama">Nama Mahasiswa : </label>
+                        <input type="text" name="namaMHS" id="namaMHS">
                     </p>
                     <p>
                         <label for="ipk">No HP : </label>
