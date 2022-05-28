@@ -1,5 +1,5 @@
 <?php
-include 'koneksi.php';      // memanggil file koneksi.php untuk melakukan koneksi database
+include '../koneksi.php';      // memanggil file koneksi.php untuk melakukan koneksi database
 $_GET['tabel'] = "t_dosen";
 ?>
 
@@ -20,7 +20,7 @@ $_GET['tabel'] = "t_dosen";
         <h1>Tabel Dosen</h1>
         <center><a href="input.php">Input Data</a></center>
         <br>
-        <?php require('search.php') ?>
+        <?php require('../search.php') ?>
         <br/>
         <table border="1">
             <tr>
