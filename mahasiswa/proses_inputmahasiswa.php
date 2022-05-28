@@ -10,7 +10,7 @@ $namaMHS = $_POST['namaMHS'];
 $noHP = $_POST['noHP'];
 
 // jalankan query INSERT untuk menambah data ke database
-$query = "INSERT INTO t_mahasiswa VALUES (NULL, '$namaMHS', '$noHP')";
+$query = "INSERT INTO t_mahasiswa (namaMHS, noHP) VALUES ('$namaMHS', '$noHP')";
 $result = mysqli_query($link, $query);
 
 // periksa query apakah ada error
