@@ -1,6 +1,6 @@
 <?php
-include '../koneksi.php';      // memanggil file koneksi.php untuk melakukan koneksi database
-$_GET['tabel'] = "t_dosen";
+include 'koneksi.php';      // memanggil file koneksi.php untuk melakukan koneksi database
+$_GET['tabel'] = "t_mahasiswa";
 ?>
 
 <!DOCTYPE html>
