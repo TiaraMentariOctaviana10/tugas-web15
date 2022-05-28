@@ -1,6 +1,6 @@
 <?php
 // menampilkan file koneksi.php untuk membuat koneksi
-include 'koneksi.php';
+include '../koneksi.php';
 
 // mengecek apakah di url ada nilai GET idDosen
 if (isset($_GET['idDosen'])) {

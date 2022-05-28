@@ -1,6 +1,6 @@
 <?php
 // memanggil file koneksi.php untuk melakukan koneksi database
-include 'koneksi.php';
+include '../koneksi.php';
 
 // mengecek apakah tombol input dari form  telah di  klik
 if (isset($_POST['input'])) {
