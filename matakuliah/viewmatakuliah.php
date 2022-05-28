@@ -1,5 +1,5 @@
 <?php
-include '../koneksi.php';      // memanggil file koneksi.php untuk melakukan koneksi database
+include 'koneksi.php';      // memanggil file koneksi.php untuk melakukan koneksi database
 $_GET['tabel'] = "t_mahasiswa";
 ?>
 
@@ -17,7 +17,7 @@ $_GET['tabel'] = "t_mahasiswa";
         </style>
     </head>
     <body>
-        <h1>Tabel Mahasiswa</h1>
+        <h1>Tabel Dosen</h1>
         <center><a href="input.php">Input Data</a></center>
         <br>
         <?php require('../search.php') ?>
@@ -25,7 +25,7 @@ $_GET['tabel'] = "t_mahasiswa";
         <table border="1">
             <tr>
                 <th>ID</th>
-                <th>Nama Mahasiswa</th>
+                <th>Nama Dosen</th>
                 <th>No HP</th>
                 <th>Pilihan</th>
             </tr>
@@ -34,8 +34,8 @@ $_GET['tabel'] = "t_mahasiswa";
                 search($link);
             }
             else{
-                // jalankan query untuk menampilkan semua asecending berdasarkan IdMahasiswa
-                $query = "SELECT * FROM t_Mahasiswa ORDER BY NPM ASC";
+                // jalankan query untuk menampilkan semua asecending berdasarkan IdDosen
+                $query = "SELECT * FROM t_dosen ORDER BY IdDosen ASC";
                 $result = mysqli_query($link, $query);
 
                 // mengecek apakah ada error ketika menjalankan query
@@ -49,13 +49,13 @@ $_GET['tabel'] = "t_mahasiswa";
                 {
                     // mencetak / meamplikan data
                     echo "<tr>";
-                    echo "<td>$data[NPM]</td>";       // menampilan data NPM
-                    echo "<td>$data[namaMHS]</td>";    // menampilkan data namaMHS
+                    echo "<td>$data[idDosen]</td>";       // menampilan data idDosen
+                    echo "<td>$data[namaDosen]</td>";    // menampilkan data namaDosen
                     echo "<td>$data[noHP]</td>";       // menampilkan data noHP
                     // membuat  link untuk mengedit dan menghapus data
                     echo '<td>
-                    <a href="editmahasiswa.php?NPM='.$data['NPM'].'">Edit</a> /
-                    <a href="hapusmahasiswa.php?NPM='.$data['NPM'].'"
+                    <a href="editdosen.php?idDosen='.$data['idDosen'].'">Edit</a> /
+                    <a href="hapusdosen.php?idDosen='.$data['idDosen'].'"
                     onclick="return confirm(\'Anda yakin akan mengahpus data?\')">Hapus</a>
                     </td>';
                     echo "</tr>";
