@@ -45,7 +45,7 @@ include 'koneksi.php';      // memanggil file koneksi.php untuk melakukan koneks
                 echo "<tr>";
                 echo "<td>$data[idDosen]</td>";       // menampilan data idDosen
                 echo "<td>$data[namaDosen]</td>";    // menampilkan data namaDosen
-                echo "<td>$$data[noHP]</td>";       // menampilkan data noHP
+                echo "<td>$data[noHP]</td>";       // menampilkan data noHP
                 // membuat  link untuk mengedit dan menghapus data
                 echo '<td>
                 <a href="editdosen.php?idDosen='.$data['idDosen'].'">Edit</a> /
