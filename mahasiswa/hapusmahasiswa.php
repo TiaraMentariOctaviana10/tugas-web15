@@ -9,7 +9,7 @@ if(isset($_GET["NPM"])) {
     $id = $_GET["NPM"];
 
     // jalankan query DELETE untuk menghapus data
-    $query = "DELETE FROM t_dosen WHERE NPM='$id' ";
+    $query = "DELETE FROM t_mahasiswa WHERE NPM='$id' ";
     $hasil_query = mysqli_query($link, $query);
 
     // periksa query, apakah ada kesalahan
