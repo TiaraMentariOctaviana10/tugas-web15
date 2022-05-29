@@ -5,9 +5,9 @@ if(isset($_POST['edit'])) {
 include("../koneksi.php");
 
 // membuat variabel untuk menampung data dari form edit
-$id = $_POST['idDosen'];
-$namaDosen = $_POST['namaDosen'];
-$noHP = $_POST['noHP'];
+$id = $_POST['kodeMK'];
+$namaDosen = $_POST['namaMK'];
+$noHP = $_POST['sks'];
 
 // buat dan jalankan query UPDATE
 $query = "UPDATE t_dosen SET namaDosen = '".$namaDosen."', noHP = '".$noHP."' WHERE idDosen = ".$id;

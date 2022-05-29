@@ -1,6 +1,6 @@
 <?php
 include 'koneksi.php';      // memanggil file koneksi.php untuk melakukan koneksi database
-$_GET['tabel'] = "t_mahasiswa";
+$_GET['tabel'] = "t_matakuliah";
 ?>
 
 <!DOCTYPE html>
@@ -24,10 +24,10 @@ $_GET['tabel'] = "t_mahasiswa";
         <br/>
         <table border="1">
             <tr>
-                <th>ID</th>
-                <th>Nama Dosen</th>
-                <th>No HP</th>
-                <th>Pilihan</th>
+                <th>kodeMK</th>
+                <th>namaMk</th>
+                <th>sks</th>
+                <th>jam</th>
             </tr>
             <?php
             if(isset($_GET['search'])){
@@ -52,10 +52,10 @@ $_GET['tabel'] = "t_mahasiswa";
                     echo "<td>$data[idDosen]</td>";       // menampilan data idDosen
                     echo "<td>$data[namaDosen]</td>";    // menampilkan data namaDosen
                     echo "<td>$data[noHP]</td>";       // menampilkan data noHP
-                    // membuat  link untuk mengedit dan menghapus data
+                    // membuat link untuk mengedit dan menghapus data
                     echo '<td>
-                    <a href="editdosen.php?idDosen='.$data['idDosen'].'">Edit</a> /
-                    <a href="hapusdosen.php?idDosen='.$data['idDosen'].'"
+                    <a href="editmatakuliah.php?idDosen='.$data['kodeMK'].'">Edit</a> /
+                    <a href="hapusmatakuliah.php?idDosen='.$data['namaMK'].'"
                     onclick="return confirm(\'Anda yakin akan mengahpus data?\')">Hapus</a>
                     </td>';
                     echo "</tr>";

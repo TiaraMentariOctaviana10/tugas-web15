@@ -6,8 +6,8 @@ include '../koneksi.php';
 if (isset($_POST['input'])) {
 
 // membuat variabel untuk menampung data dari form
-$namaDosen = $_POST['namaDosen'];
-$noHP = $_POST['noHP'];
+$namaDosen = $_POST['namaMK'];
+$noHP = $_POST['sks'];
 
 // jalankan query INSERT untuk menambah data ke database
 $query = "INSERT INTO t_dosen VALUES (NULL, '$namaDosen', '$noHP')";

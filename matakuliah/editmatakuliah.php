@@ -45,18 +45,18 @@ if (isset($_GET['idDosen'])) {
             <form id="form_mahasiswa" action="proses_editdosen.php" method="post">
 
             <fieldset>
-                <legend>Edit Data Dosen</legend>
+                <legend>Edit Data Matakuliah</legend>
                 <p>
-                    <label for="idDosen">ID : </label>
+                    <label for="idDosen">kodeMK: </label>
                     <input type="hidden" name="idDosen" value="<?php echo $idDosen ; ?>">
                     <input type="text" name="idDosenDisabled" id="idDosenDisabled" value="<?php echo $idDosen ?>" disabled>
                 </p>
                 <p>
-                    <label for="namaDosen">Nama Dosen : </label>
+                    <label for="namaDosen">NamaMK : </label>
                     <input type="text" name="namaDosen" id="namaDosen" value="<?php echo $namaDosen ?>">
                 </p>
                 <p>
-                    <label for="noHP">No HP : </label>
+                    <label for="noHP">sks : </label>
                     <input type="text" name="noHP" value="<?php echo $noHP ?>">
                 </p>
             </fieldset>

@@ -1,11 +1,11 @@
 <?php 
-    require('koneksi.php');
+    require'koneksi.php';
 
     function search($link){
         $tabel = $_GET['tabel'];
         $search = $_GET['text_search'];
         if($tabel == "t_dosen"){
-            $berdasarkan = "namaDosen";
+            $berdasarkan = "kodeMK";
         }
         else if($tabel == "t_mahasiswa"){
             $berdasarkan = "namaMHS";
@@ -17,26 +17,25 @@
             if($tabel == "t_dosen"){
 ?>
                 <tr>
-                    <td><?php echo $pecah['idDosen'] ?></td>
-                    <td><?php echo $pecah['namaDosen'] ?></td>
-                    <td><?php echo $pecah['noHP'] ?></td>
+                    <td><?php echo $pecah['kodeMK'] ?></td>
+                    <td><?php echo $pecah['namaMK'] ?></td>
+                    <td><?php echo $pecah['sks'] ?></td>
                     <td>
-                        <a href="editdosen.php?idDosen=<?php echo $pecah['idDosen']?>">Edit</a>
-                        <a href="hapusdosen.php?idDosen=<?php echo $pecah['idDosen']?>" onclick="return confirm('Anda yakin akan mengahpus data?')">Hapus</a></td>;
+                        <a href="editmatakuliah.php?idDosen=<?php echo $pecah['kodeMK']?>">Edit</a>
+                        <a href="hapusmatakuliah.php?idDosen=<?php echo $pecah['kodeMK']?>" onclick="return confirm('Anda yakin akan mengahpus data?')">Hapus</a></td>;
                 </tr>
 <?php
             }
-            else if($tabel == "t_mahasiswa"){
+            else if($tabel == "t_matakuliah"){
 ?>
                 <tr>
-                    <td><?php echo $pecah['NPM'] ?></td>
-                    <td><?php echo $pecah['namaMHS'] ?></td>
-                    <td><?php echo $pecah['prodi'] ?></td>
-                    <td><?php echo $pecah['alamat'] ?></td>
-                    <td><?php echo $pecah['noHP'] ?></td>
+                    <td><?php echo $pecah['kodeMK'] ?></td>
+                    <td><?php echo $pecah['namaMK'] ?></td>
+                    <td><?php echo $pecah['sks'] ?></td>
+                    <td><?php echo $pecah['jam'] ?></td>
                     <td>
-                        <a href="editmahasiswa.php?NPM=<?php echo $pecah['NPM']?>">Edit</a>
-                        <a href="hapusmahasiswa.php?NPM=<?php echo $pecah['NPM']?>" onclick="return confirm('Anda yakin akan mengahpus data?')">Hapus</a></td>;
+                        <a href="editmatakuliah.php?NPM=<?php echo $pecah['NPM']?>">Edit</a>
+                        <a href="hapusmatakuliah.php?NPM=<?php echo $pecah['NPM']?>" onclick="return confirm('Anda yakin akan mengahpus data?')">Hapus</a></td>;
                 </tr>
 <?php
             }

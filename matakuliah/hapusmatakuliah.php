@@ -3,10 +3,10 @@
 include("../koneksi.php");
 
 // mengecek apakah di url ada GET idDosen
-if(isset($_GET["idDosen"])) {
+if(isset($_GET["kodeMK"])) {
 
     // menyimpan variabel id dai url ke dalam variabel $idDosen
-    $id = $_GET["idDosen"];
+    $id = $_GET["kodeMK"];
 
     // jalankan query DELETE untuk menghapus data
     $query = "DELETE FROM t_dosen WHERE idDOsen='$id' ";
