@@ -17,7 +17,7 @@ $_GET['tabel'] = "t_matakuliah";
         </style>
     </head>
     <body>
-        <h1>Tabel Dosen</h1>
+        <h1>Tabel Matakuliah</h1>
         <center><a href="input.php">Input Data</a></center>
         <br>
         <?php require('../search.php') ?>
