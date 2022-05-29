@@ -49,9 +49,9 @@ $_GET['tabel'] = "t_matakuliah";
                 {
                     // mencetak / meamplikan data
                     echo "<tr>";
-                    echo "<td>$data[idDosen]</td>";       // menampilan data idDosen
-                    echo "<td>$data[namaDosen]</td>";    // menampilkan data namaDosen
-                    echo "<td>$data[noHP]</td>";       // menampilkan data noHP
+                    echo "<td>$data[kodeMK]</td>";       // menampilan data idDosen
+                    echo "<td>$data[namaMK]</td>";    // menampilkan data namaDosen
+                    echo "<td>$data[sks]</td>";       // menampilkan data noHP
                     // membuat link untuk mengedit dan menghapus data
                     echo '<td>
                     <a href="editmatakuliah.php?idDosen='.$data['kodeMK'].'">Edit</a> /
