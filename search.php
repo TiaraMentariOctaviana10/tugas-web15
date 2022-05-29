@@ -4,17 +4,17 @@
     function search($link){
         $tabel = $_GET['tabel'];
         $search = $_GET['text_search'];
-        if($tabel == "t_dosen"){
+        if($tabel == "t_matakuliah"){
             $berdasarkan = "kodeMK";
         }
-        else if($tabel == "t_mahasiswa"){
-            $berdasarkan = "namaMHS";
+        else if($tabel == "t_matakuliah"){
+            $berdasarkan = "namaMK";
         }
         $sql = "SELECT * FROM ".$tabel." WHERE ".$berdasarkan." like '%".$search."%'";
         $query = mysqli_query($link,$sql);
         
         while($pecah = mysqli_fetch_array($query)){
-            if($tabel == "t_dosen"){
+            if($tabel == "t_matakuliah"){
 ?>
                 <tr>
                     <td><?php echo $pecah['kodeMK'] ?></td>

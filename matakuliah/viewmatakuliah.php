@@ -55,7 +55,7 @@ $_GET['tabel'] = "t_matakuliah";
                     // membuat link untuk mengedit dan menghapus data
                     echo '<td>
                     <a href="editmatakuliah.php?idDosen='.$data['kodeMK'].'">Edit</a> /
-                    <a href="hapusmatakuliah.php?idDosen='.$data['namaMK'].'"
+                    <a href="hapusmatakuliah.php?idDosen='.$data['kodeMK'].'"
                     onclick="return confirm(\'Anda yakin akan mengahpus data?\')">Hapus</a>
                     </td>';
                     echo "</tr>";
